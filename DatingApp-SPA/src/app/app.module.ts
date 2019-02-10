@@ -10,7 +10,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import {TimeAgoPipe} from 'time-ago-pipe';
 
 import { AppComponent } from './app.component';
-// import { ValueComponent } from './value/value.component';
+import { ValueComponent } from './value/value.component';
 import { NavComponent } from './nav/nav.component';
 import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
@@ -42,7 +42,7 @@ export function tokenGetter() {
 @NgModule({
    declarations: [
       AppComponent,
-      // ValueComponent,
+      ValueComponent,
       NavComponent,
       HomeComponent,
       RegisterComponent,
@@ -73,7 +73,7 @@ export function tokenGetter() {
          config: {
             tokenGetter: tokenGetter,
             whitelistedDomains: ['localhost:5000'],
-            blacklistedRoutes: ['localhost:5000/api/auth']
+            blacklistedRoutes: ['localhost:5000/api/auth/register']
          }
       })
    ],
